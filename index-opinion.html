@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Opinion Demo</title>
+  <link rel="stylesheet" href="style-opinion.css">
+</head>
+<body>
+  <h1>How should we decide things together?</h1>
+  <p>Create an account, write your opinion, and vote on others'. Comments are visible to all participants.</p>
+  <p id="model-status" class="small"></p>
+
+  <section id="auth-box">
+    <input id="email" type="email" placeholder="Email" autocomplete="email">
+    <input id="password" type="password" placeholder="Password (6+ characters)" autocomplete="current-password">
+    <button id="signup">Sign up</button>
+    <button id="login">Log in</button>
+    <p id="auth-msg" class="small"></p>
+  </section>
+
+  <section id="main" hidden>
+    <button id="logout">Log out</button>
+    <h2>Your opinion</h2>
+    <textarea id="opinion" maxlength="500" placeholder="Write your opinion (500 characters max)"></textarea>
+    <button id="submit">Post</button>
+    <p id="post-msg" class="small"></p>
+
+    <h2>Opinions <button id="refresh">Refresh</button></h2>
+    <div id="comments"></div>
+  </section>
+
+  <script type="module" src="script-opinion.js"></script>
+</body>
+</html>
